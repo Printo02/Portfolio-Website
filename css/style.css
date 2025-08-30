@@ -1,0 +1,907 @@
+html { 
+  scroll-behavior: smooth; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+  font-family: system-ui;
+}
+
+
+/* Nav-Bar */
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full screen */
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill screen */
+  z-index: -1; /* behind everything */
+}
+
+nav {
+  position: relative;
+  z-index: 10; /* keeps menu above video */
+}
+
+
+.nav-bar-ul {
+    text-align: center;
+    cursor: pointer;
+    padding: 15px 15px;
+    font-size: medium;
+    /* background-color: #3b3b3b; */
+    background-color: transparent; 
+    border-radius: 10px;
+    margin: auto; 
+    width: fit-content;
+}
+
+
+.nav-bar-li {
+  display: inline;
+  padding: 3px 3px;
+  text-align: center;
+}
+
+.nav-bar-li a {
+  text-decoration: none;
+  padding: 6px 6px;
+  color: white;
+  font-weight: 200;
+}
+
+.nav-bar-li a:hover{
+  color:rgb(177, 17, 44);
+}
+
+/* Nav-Bar */
+.nav-bar-ul {
+    text-align: center;
+    cursor: pointer;
+    padding: 15px 15px;
+    font-size: medium;
+    background-color: transparent; 
+    border-radius: 10px;
+    margin: auto; 
+    width: fit-content;
+}
+
+.nav-bar-li {
+  display: inline;
+  padding: 3px 3px;
+  text-align: center;
+}
+
+
+
+
+/* Header */
+
+.header {
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header {
+    margin-top: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header-text{
+  margin-top: 20%;
+  font-size: 30px;
+}
+
+.header-text h1 {
+    color: red;
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text p {
+    font-weight: 200;
+}
+
+/* About */
+#about{
+  padding: 0 80px;
+  margin-bottom: 150px;
+}
+
+.row {
+  margin-top: 40px;
+  margin-bottom: 60px ;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.about-col-1 {
+    flex-basis: 50%;
+}
+
+.about-col-2 {
+    flex-basis: 50%;
+}
+
+.about-col-1 h1{
+  font-family: system-ui;
+  display: flex;
+}
+
+.about-col-1 p{
+  width: fit-content;
+  font-weight: 200;
+  font-size: larger;
+  word-spacing: 5px; 
+  gap: 40px; 
+}
+
+.about-col-2  {
+    margin-top: 20px;
+    margin-right: 80px;
+    flex-basis: 35%;
+}
+
+.about-col-2 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+
+.social-media-icons-about {
+  margin-top: 0;
+  display: flex;
+  gap: 15px;
+  text-decoration: none;
+}
+
+.social-media-icons-about-respo{
+  display: none;
+}
+
+
+.dwnld-cv-btn-respo {
+  display: none;
+}
+
+
+.social-media-icons-about a {
+  font-size: 1.8rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+
+.social-media-icons-about a:hover {
+  color: #ffffff;
+  transform: translateY(-5px) scale(1.1);
+}
+
+
+/* Education */
+#education h1{
+  padding-top:20px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.education-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  padding: 20px;
+}
+
+.education-list div{
+    background-color: #262626;
+    padding: 40px;
+    /* font-size: 13px;
+    font-weight: 500; */
+    border-radius: 10px;
+}
+
+.education-list div i {
+  font-size: 50px;
+  margin-bottom: 18px;
+}
+
+.education-list div h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.education-list div p {
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+.education-list div {
+    background-color: #262626;
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+    transition: all 0.3s ease; /* smooth animation */
+    cursor: pointer;
+}
+
+.education-list div i {
+  font-size: 50px;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+}
+
+.education-list div h2,
+.education-list div p {
+  transition: all 0.3s ease;
+}
+
+/* Hover state */
+.education-list div:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(-10px); /* moves up */
+}
+
+/* Ensure icons also change to black */
+.education-list div:hover i {
+    color: black;
+}
+
+
+/* Skills */
+
+#skills .container h1{
+  padding-top:20px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+  padding: 20px;
+  margin-bottom: 130px;
+}
+
+.skills-list div{
+    background-color: #262626;
+    padding: 40px;
+    /* font-size: 13px;
+    font-weight: 500; */
+    border-radius: 10px;
+}
+
+.skills-list div i {
+  font-size: 50px;
+  margin-bottom: 18px;
+}
+
+.skills-list div h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.skills-list div p {
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+.skills-list div {
+    background-color: #262626;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    transition: all 0.3s ease; 
+    cursor: pointer;
+}
+
+.skills-list div i {
+  font-size: 40px;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+}
+
+.skills-list div h2,
+.skills-list div p {
+  transition: all 0.3s ease;
+}
+
+/* Hover state */
+.skills-list div:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(-10px); /* moves up */
+}
+
+/* Ensure icons also change to black */
+.skills-list div:hover i {
+    color: black;
+}
+
+
+
+/* Projects */
+#project h1 {
+  padding-top: 20px;
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+}
+
+
+/* wrapper (kept) */
+.project-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative; /* needed for absolute arrow positioning */
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* improved arrow styling (more specific so it applies) */
+.project-wrapper .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  border: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 50;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+
+.project-wrapper .arrow.left { left: 8px; }
+.project-wrapper .arrow.right { right: 8px; }
+.project-wrapper .arrow:hover { background: rgba(0,0,0,0.65); }
+.project-wrapper .arrow.disabled { opacity: 0.35; pointer-events: none; }
+
+
+/* your project-list kept, but ensure horizontal behaviour preserved */
+.project-list {
+  display: flex;
+  gap: 25px;
+  overflow: hidden; 
+  width: 100%;
+  scroll-behavior: smooth;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: stretch;
+}
+
+
+/* card base — small change: allow visible overflow and enable flex-based expansion */
+.project-card {
+  flex: 0 0 calc(25% - 20px); /* 4 per row baseline */
+  height: 250px;
+  border-radius: 12px;
+  overflow: visible; /* allow internal details to be visible (so they won't be clipped) */
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.25s ease, flex-basis 0.35s ease;
+  display: block;
+}
+
+/* inner wrapper to keep media + details side-by-side inside a card */
+.project-card .card-inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #222; /* fallback so borders look consistent */
+}
+
+/* media area (image + overlay) */
+.card-media {
+  flex: 1 1 100%;
+  min-width: 0; /* important so image can shrink */
+  position: relative;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* overlay (kept your style) */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  background: #262626;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.25s ease;
+}
+
+.card-media:hover .overlay,
+.project-card:hover .overlay {
+  background: #fff;
+  color: #000;
+}
+
+/* hide overlay title when details appear */
+.project-card:hover .overlay p {
+  display: none;
+}
+
+.project-card:hover .overlay  {
+  display: none;
+}
+
+
+/* details panel (collapsed by default, expands on hover) */
+.details {
+  flex: 0 0 0;         /* collapsed */
+  max-width: 0;        /* collapsed */
+  padding: 0 0;        /* no space until open */
+  background: #fff;
+  color: #000;
+  box-sizing: border-box;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-width 0.35s ease, padding 0.35s ease, opacity 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* expand the card when hovered — pushes siblings to the right */
+.project-card:hover {
+  flex-basis: 40%;             /* card grows (pushes siblings) */
+  transform: translateY(-8px);
+}
+
+
+/* details become visible when the card is hovered */
+.project-card:hover .details {
+  max-width: 380px;            /* amount of space details can occupy */
+  flex: 0 0 45%;
+  padding: 18px;
+  opacity: 1;
+}
+
+
+/* small content styling */
+.details h3 { margin: 0 0 6px 0; font-size: 18px; }
+.details p { margin: 0 0 10px 0; font-size: 14px; line-height: 1.3; }
+.details .proj-link { color: #007bff; text-decoration: none; font-weight: 600; }
+
+
+/* keep previous hover lift for image area too (so behavior is consistent) */
+.project-card:hover .card-media img {
+  /* optional scale effect if you like; comment out if not needed */
+  transform: scale(1.02);
+  transition: transform 0.35s ease;
+}
+
+
+
+/* END Card */
+.project-card.end-card {
+  flex: 0 0 auto;             /* keep it same width as other cards */
+  width: 250px;               /* adjust same as your other cards */
+  height: 200px;              /* adjust same as your other cards */
+  background: #f5f5f5;
+  box-shadow: none;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  transition: none !important; /* disable all transitions */
+}
+
+.project-card.end-card .end-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.project-card.end-card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+/* Kill all hover/expand effects for END card */
+.project-card.end-card:hover,
+.project-card.end-card:hover .end-inner,
+.project-card.end-card:hover p {
+  transform: none !important;
+  opacity: 1 !important;
+  background: #f5f5f5 !important;
+}
+
+
+
+
+/* responsive: on smaller screens reduce base card width */
+@media (max-width: 900px) {
+  .project-card { flex: 0 0 calc(50% - 20px); }
+  .project-card:hover { flex-basis: 70%; }
+}
+
+@media (max-width: 520px) {
+  .project-card { flex: 0 0 calc(100% - 20px); }
+  .project-card:hover { flex-basis: 100%; }
+}
+
+
+/* Contact */
+
+.contact {
+  padding: 50px 20px;
+  color: white;
+  margin: 30px auto;
+  max-width: 900px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+}
+
+.contact h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+
+/* Flex Layout */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;  /* responsive */
+}
+
+/* Left Side */
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.contact-info li {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info i {
+  color: #ffffff;
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+/* Right Side - Social Icons */
+
+.social-media-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-media-icons a {
+  font-size: 1.8rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.social-media-icons a:hover {
+  color: #ffffff;
+  transform: translateY(-5px) scale(1.1);
+}
+
+
+.dwnld-cv-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #000;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 30px;
+}
+
+.dwnld-cv-btn-end {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #000;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 30px;
+}
+
+
+/* ---------------------------- Footer ---------------------------- */
+.footer {
+  background-color:#262626;
+  color: white;
+  text-align: center;
+  padding: 1px;
+  width: 100%;
+
+  
+}
+
+.footer #links-footer a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+/* ---------------------------- CSS Responsive Screen ---------------------------- */
+
+nav .fas{
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .header-text{
+    margin-top: 50%;
+    font-size: 30px;
+  }
+
+  nav .fas {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute; /* make it float inside nav */
+    top: 20px;
+    left: 20px; /* move to left side */
+    z-index: 1000; 
+  }
+
+  nav .fa-bars {
+  position: absolute;
+  top: 20px;
+  left: 120px;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 1100; /* stays above sidebar */
+  }
+
+
+  .nav-bar-ul {
+    background: #262626;   
+    position: fixed;
+    top: 0;
+    right: -200px;  /* hidden by default */
+    width: 150px;
+    height: 100vh;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 20px;
+    z-index: 1000; 
+    transition: right 0.3s ease;  /* slide effect */
+  }
+
+  /* When nav is active */
+  .nav-bar-ul.active {
+    right: 0;  /* visible */
+  }
+
+  .nav-bar-li {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  .nav-bar-li a {
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+  }
+
+  .nav-bar-ul .fas {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+
+  /* About  */
+  .about-col-1 , .about-col-2{
+    flex-basis: 100%;
+  }
+
+  .about-col-1 p {
+    font-weight: 200;
+    font-size: 20px;
+    word-spacing: 3px; 
+    line-height: 1.5;
+  }
+
+  .about-col-2 img {
+    width: 250px;          
+    max-width: 650px;    
+    height: auto;
+    border-radius: 25px;
+    margin-right: 120px;
+  }
+
+  .social-media-icons-about a {
+    display: none;
+  }
+
+
+  .social-media-icons-about-respo {
+    display: flex;
+    justify-content: center;  
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .social-media-icons-about-respo a {
+    font-size: 1.8rem;
+    color: white;
+    transition: all 0.3s ease;
+  }
+
+  .social-media-icons-about-respo a:hover {
+    color: #ffffff;
+    transform: translateY(-5px) scale(1.1);
+  }
+
+  .dwnld-cv-btn {
+    display: none;
+  }
+
+  .dwnld-cv-btn-respo {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #000;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 30px;
+  }
+  
+  .project-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative; /* needed for absolute arrow positioning */
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 50px;
+  }
+
+  .project-list {
+  display: flex;
+  gap: 25px;
+  overflow: hidden; 
+  width: 100%;
+  scroll-behavior: smooth;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: stretch;
+  }
+
+  .contact h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  position: relative;
+  margin-top: -20px;
+  }
+
+  .contact-info {
+    font-size: 17px;
+    justify-content: center;  /* center horizontally */
+    margin: 0 auto;
+    padding-left: 10px;  
+    margin-bottom: 10px;
+  }
+
+  .social-media-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* center horizontally */
+  gap: 15px;
+  margin: 0 auto;           /* center the whole block */
+}
+
+.social-media-icons a {
+  font-size: 1.8rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.social-media-icons a:hover {
+  color: #ffffff;
+  transform: translateY(-5px) scale(1.1);
+}
+
+  .dwnld-cv-btn-end {
+  margin-top: 25px;
+  display: inline-block;
+  margin-left: 80px;
+  padding: 12px 25px;
+  background-color: #000;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 30px;
+  }
+
+
+  html { 
+    scroll-behavior: smooth; 
+  }
+
+
+}
+
+
+
